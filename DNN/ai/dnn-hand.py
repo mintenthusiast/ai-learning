@@ -133,7 +133,7 @@ class MLP:
 
 
 
-data = np.load('DNN-MNIST/data/mnist.npz', allow_pickle=True)
+data = np.load('DNN/data/mnist.npz', allow_pickle=True)
 x_train = data['x_train']
 y_train = data['y_train']
 x_test = data['x_test']
