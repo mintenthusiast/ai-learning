@@ -1,7 +1,7 @@
 import numpy as np
 import tensorflow as tf
 
-data = np.load('DNN-MNIST/data/mnist.npz')
+data = np.load('DNN/data/mnist.npz')
 
 x_train = data['x_train']
 y_train = data['y_train']
