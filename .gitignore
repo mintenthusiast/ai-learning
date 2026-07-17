@@ -10,9 +10,13 @@ venv/
 env/
 
 # Data files (large/generated datasets)
-CNN/data/
-DNN/data/
-RNN/data/
+AI/CNN/data/
+AI/DNN/data/
+AI/RNN/data/
+
+# Model checkpoints / binary numpy archives
+AI/DNN/save/
+*.npz
 
 # OS / editor noise
 .DS_Store
