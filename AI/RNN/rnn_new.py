@@ -268,7 +268,7 @@ class RNN:
 script_dir = os.path.dirname(os.path.abspath(__file__))
 path = os.path.normpath(os.path.join(script_dir, '..', 'RNN', 'data', 'input.txt'))
     
-rnn = RNN(lr=0.01, hidden_layers=4, h_sizes=[512, 256, 128, 64], load=False, max_vocab=2000,
+rnn = RNN(lr=0.01, hidden_layers=5, h_sizes=[512, 256, 128, 64, 32], load=False, max_vocab=2000,
           seq_length=32, seq_number=64, path=path)
 
 rnn.fit(epochs=50)
