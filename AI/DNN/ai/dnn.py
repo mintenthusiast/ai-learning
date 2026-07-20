@@ -64,7 +64,7 @@ class MLP:
         prev_d = d_out
 
         for i in reversed(range(len(self.layers))):
-            z_i, a_i = self.forward_cache[i + 1]
+            z_i, _ = self.forward_cache[i + 1]
             a_prev = self.forward_cache[i][1]
             layer = self.layers[i]
 
@@ -145,7 +145,7 @@ class MLP:
 
 
 mlp = MLP(lr=0.01, hidden_layers=4, h_sizes=[512, 256, 128, 64], input_size=784,
-          output_size=10)
+          output_size=10, load=True)
 
 script_dir = os.path.dirname(os.path.abspath(__file__))
 path = os.path.normpath(os.path.join(script_dir, '..', 'data', 'mnist.npz'))
@@ -180,3 +180,6 @@ y_pred = mlp.predict(x_test)
 test_acc = np.mean(y_pred == y_test)
 print(f"Test Accuracy: {test_acc:.4f}")
 
+# TOOD: f1, auc calc + tensorboard
+# value changes per epoch... graph
+# run multiple instances
